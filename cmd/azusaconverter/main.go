@@ -17,6 +17,7 @@ const (
 	exitCodeOK = iota
 	exitCodeErr
 )
+
 func run(input string) int {
 	if len(input) == 0 {
 		fmt.Fprintf(os.Stderr, "usage: #{name} text \n")
@@ -28,5 +29,5 @@ func run(input string) int {
 
 func convert(input string) {
 	output := azusaconverter.Convert(input)
-	fmt.Fprintf(os.Stdout, output)
+	fmt.Fprint(os.Stdout, output)
 }
